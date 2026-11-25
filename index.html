@@ -335,7 +335,6 @@ body[data-me]:not([data-all]) .stu:not(.mine){display:none}
     <div class="stp"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 15l2.5 2.5L16 13"/></svg>
       <div class="t"><b>3분</b><span>STEP 3</span></div><h3>할 일 하나 + 날짜</h3><p>「다음까지 ○○을 ○월 ○일까지 해 올게요」를 내 입으로 말해요.</p></div>
   </div>
-  <div class="order" id="order"><span class="faint small" style="margin-right:4px">순서</span><span class="p" data-id="chaeho">이채호</span><em>→</em><span class="p" data-id="hyunwoo">노현우</span><em>→</em><span class="p" data-id="seokhyun">임석현</span><em>→</em><span class="p" data-id="sunwoo">이선우</span><em>→</em><span class="faint small">다 같이 보고서 목차 나누기</span></div>
   <div class="calm"><b>말이 잘 안 나오면</b> 채팅으로 써도 괜찮아요. 모르는 건 「아직 확인 안 했어요」라고 말하면 됩니다. 다 해 오지 못했어도 그 자리에서 같이 정해요.</div>
 </section>
 
@@ -685,7 +684,6 @@ body[data-me]:not([data-all]) .stu:not(.mine){display:none}
   function setMe(id){
     me=id||'';set('me',me);
     whoBtns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.id===me?'true':'false')});
-    document.querySelectorAll('#order .p').forEach(function(p){p.classList.toggle('me',p.dataset.id===me)});
     document.querySelectorAll('.stu').forEach(function(c){c.classList.toggle('mine',c.dataset.id===me)});
     var s=STU.filter(function(x){return x.id===me})[0];
     if(s){body.setAttribute('data-me',me);body.removeAttribute('data-all');
